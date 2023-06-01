@@ -51,7 +51,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jPanel3" max="32767" attributes="0"/>
+                  <Component id="jPanel3" pref="730" max="32767" attributes="0"/>
                   <Component id="jPanel1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -73,6 +73,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="26" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="btnOrderCart" min="-2" pref="152" max="-2" attributes="0"/>
                       <Component id="btnHome" min="-2" pref="152" max="-2" attributes="0"/>
                       <Component id="btnExit" min="-2" pref="152" max="-2" attributes="0"/>
                   </Group>
@@ -85,7 +86,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="btnHome" min="-2" pref="43" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="btnOrderCart" min="-2" pref="43" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   <Component id="btnExit" min="-2" pref="43" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
               </Group>
@@ -119,6 +122,20 @@
               <Color blue="33" green="33" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="   Home"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnOrderCart">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="f2" red="ec" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI Black" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Order Cart"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -159,7 +176,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="320" y="290" width="-1" height="36"/>
+              <AbsoluteConstraints x="370" y="280" width="-1" height="36"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -236,7 +253,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="TextPayAmount">
+        <Component class="javax.swing.JTextField" name="TextPayableAmount">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="220" y="630" width="271" height="-1"/>
@@ -268,16 +285,14 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\rkrah\OneDrive\Desktop\BKash-Logo.wine_1_150x40.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="Pay Now"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPaymentActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="240" y="670" width="210" height="40"/>
+              <AbsoluteConstraints x="270" y="670" width="190" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -294,7 +309,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="TextPayableAmount">
+        <Component class="javax.swing.JTextField" name="TextPayAmount">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="460" y="390" width="301" height="-1"/>

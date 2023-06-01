@@ -24,19 +24,19 @@ public class PaymentView extends javax.swing.JFrame {
     }
 
     public JTextField getTextPayAmount() {
-        return TextPayAmount;
-    }
-
-    public void setTextPayAmount(JTextField TextPayAmount) {
-        this.TextPayAmount = TextPayAmount;
-    }
-
-    public JTextField getTextPayableAmount() {
         return TextPayableAmount;
     }
 
+    public void setTextPayAmount(JTextField TextPayAmount) {
+        this.TextPayableAmount = TextPayAmount;
+    }
+
+    public JTextField getTextPayableAmount() {
+        return TextPayAmount;
+    }
+
     public void setTextPayableAmount(JTextField TextPayableAmount) {
-        this.TextPayableAmount = TextPayableAmount;
+        this.TextPayAmount = TextPayableAmount;
     }
 
     public JTextField getTextReference() {
@@ -83,6 +83,7 @@ public class PaymentView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnExit = new javax.swing.JButton();
         btnHome = new javax.swing.JButton();
+        btnOrderCart = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -93,12 +94,12 @@ public class PaymentView extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         TextUserFullName = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        TextPayAmount = new javax.swing.JTextField();
+        TextPayableAmount = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         TextSenderNumber = new javax.swing.JTextField();
         btnPayment = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        TextPayableAmount = new javax.swing.JTextField();
+        TextPayAmount = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         TextReference = new javax.swing.JTextField();
 
@@ -119,6 +120,11 @@ public class PaymentView extends javax.swing.JFrame {
         btnHome.setForeground(new java.awt.Color(0, 51, 51));
         btnHome.setText("   Home");
 
+        btnOrderCart.setBackground(new java.awt.Color(236, 242, 255));
+        btnOrderCart.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        btnOrderCart.setForeground(new java.awt.Color(0, 51, 51));
+        btnOrderCart.setText("Order Cart");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -126,6 +132,7 @@ public class PaymentView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(26, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnOrderCart, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
@@ -135,7 +142,9 @@ public class PaymentView extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97)
+                .addGap(32, 32, 32)
+                .addComponent(btnOrderCart, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
                 .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(183, 183, 183))
         );
@@ -150,7 +159,7 @@ public class PaymentView extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Payment ");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, -1, 36));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, 36));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("User ID");
@@ -170,7 +179,7 @@ public class PaymentView extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Payable Amount");
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, 132, 26));
-        jPanel3.add(TextPayAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, 271, -1));
+        jPanel3.add(TextPayableAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, 271, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Amount");
@@ -178,18 +187,18 @@ public class PaymentView extends javax.swing.JFrame {
         jPanel3.add(TextSenderNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 549, 301, -1));
 
         btnPayment.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPayment.setIcon(new javax.swing.ImageIcon("C:\\Users\\rkrah\\OneDrive\\Desktop\\BKash-Logo.wine_1_150x40.png")); // NOI18N
+        btnPayment.setText("Pay Now");
         btnPayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPaymentActionPerformed(evt);
             }
         });
-        jPanel3.add(btnPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 670, 210, 40));
+        jPanel3.add(btnPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 670, 190, 40));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Full Name");
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 83, 26));
-        jPanel3.add(TextPayableAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 301, -1));
+        jPanel3.add(TextPayAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 301, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setText("Reference No");
@@ -212,7 +221,7 @@ public class PaymentView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -248,6 +257,7 @@ public class PaymentView extends javax.swing.JFrame {
     private javax.swing.JTextField TextUserID;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnHome;
+    private javax.swing.JButton btnOrderCart;
     private javax.swing.JButton btnPayment;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;

@@ -60,12 +60,12 @@ public class addProduct extends javax.swing.JFrame {
         btnHome.setBackground(new java.awt.Color(236, 242, 255));
         btnHome.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         btnHome.setForeground(new java.awt.Color(0, 51, 51));
-        btnHome.setText("User Information");
+        btnHome.setText("Menu");
 
         btnHome1.setBackground(new java.awt.Color(236, 242, 255));
         btnHome1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         btnHome1.setForeground(new java.awt.Color(0, 51, 51));
-        btnHome1.setText("DashBoard");
+        btnHome1.setText("Home");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

@@ -30,6 +30,7 @@ public class user_login extends javax.swing.JFrame {
         btnExit = new javax.swing.JButton();
         btnHome = new javax.swing.JButton();
         btnRegistration = new javax.swing.JButton();
+        btnComplain = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -37,7 +38,6 @@ public class user_login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         TextUserPassword = new javax.swing.JTextField();
         btnlogin = new javax.swing.JButton();
-        btnForgatePassword = new javax.swing.JButton();
 
         jScrollPane1.setViewportView(jEditorPane1);
 
@@ -74,6 +74,17 @@ public class user_login extends javax.swing.JFrame {
             }
         });
 
+        btnComplain.setBackground(new java.awt.Color(64, 185, 60));
+        btnComplain.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        btnComplain.setForeground(new java.awt.Color(0, 51, 51));
+        btnComplain.setText("Complain");
+        btnComplain.setBorder(null);
+        btnComplain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnComplainActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -81,6 +92,7 @@ public class user_login extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(30, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnComplain, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegistration, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -89,13 +101,15 @@ public class user_login extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(241, Short.MAX_VALUE)
                 .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(53, 53, 53)
                 .addComponent(btnRegistration, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(42, 42, 42)
+                .addComponent(btnComplain, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
                 .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(247, 247, 247))
+                .addGap(145, 145, 145))
         );
 
         jPanel3.setBackground(new java.awt.Color(244, 242, 242));
@@ -124,9 +138,6 @@ public class user_login extends javax.swing.JFrame {
             }
         });
 
-        btnForgatePassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnForgatePassword.setText("Forgate Password");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -136,13 +147,12 @@ public class user_login extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(TextUserPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(TextUserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(btnlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnForgatePassword)))
+                                .addGap(148, 148, 148)))
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(161, Short.MAX_VALUE))
@@ -160,11 +170,9 @@ public class user_login extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(TextUserPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnForgatePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(175, 175, 175))
+                .addGap(45, 45, 45)
+                .addComponent(btnlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -227,6 +235,10 @@ public class user_login extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnloginActionPerformed
 
+    private void btnComplainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComplainActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnComplainActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -265,8 +277,8 @@ public class user_login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TextUserEmail;
     private javax.swing.JTextField TextUserPassword;
+    private javax.swing.JButton btnComplain;
     private javax.swing.JButton btnExit;
-    private javax.swing.JButton btnForgatePassword;
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnRegistration;
     private javax.swing.JButton btnlogin;
